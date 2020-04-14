@@ -10,9 +10,11 @@ provider:
   runtime: nodejs12.x
   memorySize: 256
   stage: ${opt:stage, 'dev'}
-
+  
 functions:
   hello:
     handler: src/handlers/hello.handler
     events:
-      - http: GET hello
+      - http:
+          method: GET
+          path: /hello
