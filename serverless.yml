@@ -1,13 +1,11 @@
-service:
-  name: sls-base
+service: sls-base
 
 plugins:
-  - serverless-bundle
   - serverless-pseudo-parameters
 
 provider:
   name: aws
-  runtime: nodejs12.x
+  runtime: nodejs20.x
   memorySize: 256
   stage: ${opt:stage, 'dev'}
   
